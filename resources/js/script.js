@@ -11,27 +11,7 @@ $(document).ready(function () {
 	}); 
 
 	/* Scrolling to contact section */
-	$(".js--scroll-to-contact").click(funct<!DOCTYPE html>
-<html lang="">
-
-<head>
-	<meta charset="utf-8">
-	<title>Example Title</title>
-	<meta name="author" content="Your Name">
-	<meta name="description" content="Example description">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="">
-	<link rel="icon" type="image/x-icon" href=""/>
-</head>
-
-<body>
-	<header></header>
-	<main></main>
-	<footer></footer>
-	<script type="text/javascript" src=""></script>
-</body>
-
-</html>ion() {
+	$(".js--scroll-to-contact").click(function() {
 		$('html, body').animate({scrollTop:$('.js--contact').offset().top},1000);
 	})
 
@@ -71,9 +51,18 @@ $(document).ready(function () {
       }
     }
   });
+
   /* Animation on Scroll */
-  $(".js--about-section").waypoint(function(direction) {	 
-			$(".js--about-box").addClass('animate__animated animate__fadeIn')}, {offset:'30%'}); 
+  $(".js--about-section").waypoint(function(direction) {
+		if(direction=="down") {
+			$(".js--about-box").addClass('animate__animated animate__fadeInDown')
+		}
+		else {
+			$(".js--about-box").addClass('animate__animated animate__fadeInUp')
+		}
+	}, {
+		offset:'30%'
+	}); 
 
    $(".js--services-section").waypoint(function(direction) {
 		$(".js--service-box").addClass('animate__animated animate__fadeIn');
