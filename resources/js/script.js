@@ -71,18 +71,9 @@ $(document).ready(function () {
       }
     }
   });
-
   /* Animation on Scroll */
-  $(".js--about-section").waypoint(function(direction) {
-		if(direction=="down") {
-			$(".js--about-box").addClass('animate__animated animate__fadeInDown')
-		}
-		else {
-			$(".js--about-box").addClass('animate__animated animate__fadeInUp')
-		}
-	}, {
-		offset:'30%'
-	}); 
+  $(".js--about-section").waypoint(function(direction) {	 
+			$(".js--about-box").addClass('animate__animated animate__fadeIn')}, {offset:'30%'}); 
 
    $(".js--services-section").waypoint(function(direction) {
 		$(".js--service-box").addClass('animate__animated animate__fadeIn');
